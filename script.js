@@ -13,13 +13,6 @@ ENABLE_CAM_BUTTON.addEventListener('click', enableCam);
 TRAIN_BUTTON.addEventListener('click', trainAndPredict);
 RESET_BUTTON.addEventListener('click', reset);
 
-let mobilenet = undefined;
-let gatherDataState = STOP_DATA_GATHER;
-let videoPlaying = false;
-let trainingDataInputs = [];
-let trainingDataOutputs = [];
-let examplesCount = [];
-let predict = false;
 
 function enableCam() {
     if (hasGetUserMedia()) {
@@ -118,7 +111,13 @@ for (let i = 0; i < dataCollectorButtons.length; i++) {
 }
 
 
-
+let mobilenet = undefined;
+let gatherDataState = STOP_DATA_GATHER;
+let videoPlaying = false;
+let trainingDataInputs = [];
+let trainingDataOutputs = [];
+let examplesCount = [];
+let predict = false;
 
 
 
